@@ -1,4 +1,4 @@
-# React + Vite Haki Store Site
+# Haki Store Site - React + Vite 
 
 1. Install dependecies
    -npm install
