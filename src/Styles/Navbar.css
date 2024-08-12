@@ -1,0 +1,321 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: black;
+    color: white;
+    height: 160px;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
+    top: 0; 
+}
+
+header img.LogoHaki {
+    height: 160px;
+    width: auto;
+}
+
+header p {
+    color: orange;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+
+.header-title {
+    display: inline-block;
+    animation: bounce 3s infinite; 
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); 
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+
+.icon-cart {
+    width: 30px;
+    height: 30px;
+    stroke: red;
+}
+
+.icon-cart:hover {
+    cursor: pointer;
+}
+
+.count-products {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    background-color: #fff;
+    color: red;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+
+.cantidad-producto-carrito{
+ font-weight: bold;
+ top: 10px;
+ right: 40px;
+ color: black;
+ font-size: 15px;
+
+}
+
+.containerEJM{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 135px;
+    position: relative;
+    top: -50px;
+}
+
+
+
+
+
+
+.container-cart-products {
+	position: absolute;
+	top: 120px;
+	right: 0;
+	background-color: #fff;
+	max-height: 88vh; 
+	overflow-y: auto;
+    overflow-x:hidden; 
+	z-index: 1;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	border-radius: 10px;
+    
+    
+}
+
+.cart-product {
+
+	padding: 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+.product-details {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+    gap: 20px;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .product-details {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .cantidad-producto-carrito{
+        font-weight: bold;
+    }
+
+    .containerEJM{
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+        margin-left: 0px;
+        position: relative;
+        top: -80px;
+        
+    }
+
+    .icon-close {
+        margin-top:20px;
+       
+    }
+
+    .img-product-carrito {
+        width: 100px;
+        height: auto;
+    }
+
+    .titulo-producto-carrito, .precio-producto-carrito, .cantidad-producto-carrito {
+        font-size: 14px;
+    }
+
+    .cart-total h3, .total-pagar {
+        font-size: 18px;
+    }
+
+    .btn-clear-all {
+        padding: 10px 0;
+        font-size: 14px;
+    }
+}
+
+.titulo-producto-carrito {
+    
+    font-weight: bold;
+    color: red;
+	font-size: 18px;
+    
+}
+.img-product-carrito {
+    border-radius: 10%;
+    max-width: 100%; 
+    height: auto;   
+    display: block; 
+    
+}
+
+
+
+.precio-producto-carrito {
+	font-weight: 700;
+	font-size: 18px;
+    color: black;
+	margin-left: 10px;
+}
+
+
+.icon-close {
+    
+    stroke: rebeccapurple;
+	width: 25px;
+	height: 25px;
+}
+
+.icon-close:hover {
+	stroke: red;
+	cursor: pointer;
+}
+
+.cart-total {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 0;
+	gap: 20px;
+    color: black;
+}
+
+.cart-empty {
+    font-size: 20px;
+	padding: 20px;
+	text-align: center;
+}
+.cart-total h3 {
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.total-pagar {
+	font-size: 20px;
+	font-weight: 900;
+}
+
+.hidden-cart {
+	display: none;
+}
+
+.btn-clear-all {
+	border: none;
+	background-color: #000;
+	color: white;
+	padding: 15px 0;
+	display: block;
+	width: 100%;
+
+	font-family: inherit;
+	cursor: pointer;
+	font-size: 15px;
+	transition: all .3s ease;
+}
+
+
+.btn-pay-all {
+	border: none;
+	background-color: rgb(106, 177, 0);
+	color: white;
+	padding: 15px 0;
+	display: block;
+	width: 100%;
+
+	font-family: inherit;
+	cursor: pointer;
+	font-size: 15px;
+	transition: all .3s ease;
+}
+
+.btn-pay-all:hover{
+    transform: scale(1.02);
+
+  }
+
+.btn-clear-all:hover{
+  transform: scale(1.02);
+
+}
+
+
+
+@media (max-width: 850px) {
+    nav ul li a {
+        display: none;
+    }
+
+    header p {
+        color: orange;
+        font-size: 25px;
+        font-weight: bold;
+        padding: 20px;
+    }
+
+    header img.LogoHaki {
+        height: 120px;
+        width: auto;
+    }
+}
